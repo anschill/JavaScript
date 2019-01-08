@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Exercice_5</title>
+  <meta charset="UTF-8" />
+</head>
+<body>
+  <form> // Création d'un formulaire
+    <div>
+       <!--label du premier élément du formulaire-->
+      <label for="firstNumber">Premier nombre : </label>
+        <!--contenu du champ-->
+      <input type="text" id="firstNumber" name="firstNumber" />
+    </div>
+    <div>
+      <label for="secondNumber">Deuxième nombre : </label>
+      <input type="text" id="secondNumber" name="secondNumber" />
+    </div>
+    <!-- Création d'un bouton submit, + événement lors du clic sur le bouton submit -->
+    <div>
+      <div><input type="submit" name="submit" id="submit" value="valider" onclick="myFunction()"/></div>
+    </form>
+     <!-- Création du script js  -->
+    <script>
+    //Création d'une fonction
+    function myFunction()
+    {
+      // Utilisation du DOM, par ID, on récupère la valeur
+      var first = document.getElementById('firstNumber').value;
+      var second = document.getElementById('secondNumber').value;
+      var result = Math.trunc(first)*second;
+      // Création d'une alert
+      alert(`Resultat : ${result}`);
+      }
+    </script>
+  </body>
+  </html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <p>Entrez nom, prénom, ville :</p>
+  <form class = "formulaire">
+    <div><label for="lastname">Nom : </label><input type="text" name="lastname" id="lastname" /></div>
+    <div><label for="firstname">Prénom : </label><input type="text" name="firstname" id="firstname" /></div>
+    <div><label for="city">Ville : </label><input type="text" name="city" id="city"/></div>
+    <div><input type="submit" name="submit" id="submit" value="valider" onclick="myFunction()"/></div>
+  </form>
+  <script>
+    function myFunction() {
+      var name = document.getElementById('lastname').value;
+      var firstname = document.getElementById('firstname').value;
+      var city = document.getElementById('city').value;
+      alert(`Nom : ${name}\nPrénom : ${firstname}\nVille : ${city});
+    }
+  </script>
+</body>
+</html>
+
+
+  <script>
+  alert(`Nom : ${lastName} \nPrénom : ${firstName}\nVille : ${city}`);
+</script>
+
+</body>
+</html>
