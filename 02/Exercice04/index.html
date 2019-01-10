@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <form>
+    <label for="lastname">Votre nom  : </label>
+    <input type="text" name="lastname" value="Doe" id="lastname" />
+    <label for="firstname">Votre prenom  : </label>
+    <input type="text" name="firstname" value="John" id="firstname" />
+    <label for="city">Votre ville  : </label>
+    <input type="text" name="city" value="New York" id="city" />
+    <div>
+      <input type="submit" name="submit" id="submit" value="RAZ"/>
+    </div>
+  </form>
+
+  <script>
+    var button = document.getElementById('submit');
+    button.onclick = function(e)
+    {
+      e.preventDefault();
+      myFunction();
+    }
+
+    function myFunction()
+    {
+      document.getElementById('lastname').value = '';
+      document.getElementById('firstname').value = '';
+      document.getElementById('city').value = '';
+    }
+  </script>
+</body>
+</html>
