@@ -9,26 +9,29 @@
 <body>
   <p>Entrez nom, prénom, ville :</p>
   <form class = "formulaire">
-    <div><label for="lastname">Nom : </label><input type="text" name="lastname" id="lastname" /></div>
-    <div><label for="firstname">Prénom : </label><input type="text" name="firstname" id="firstname" /></div>
-    <div><label for="city">Ville : </label><input type="text" name="city" id="city"/></div>
-    <div><input type="submit" name="submit" id="submit" value="valider" onclick="myFunction()"/></div>
+    <div>
+      <label for="lastname">Nom : </label>
+      <input type="text" name="lastname" id="lastname" />
+    </div>
+    <div>
+      <label for="firstname">Prénom : </label>
+      <input type="text" name="firstname" id="firstname" /></div>
+    <div>
+      <label for="city">Ville : </label>
+      <input type="text" name="city" id="city"/>
+    </div>
+    <div>
+      <input type="submit" name="submit" id="submit" value="valider" onclick="myFunction()"/>
+    </div>
   </form>
+
   <script>
     function myFunction() {
       var name = document.getElementById('lastname').value;
       var firstname = document.getElementById('firstname').value;
       var city = document.getElementById('city').value;
-      alert(`Nom : ${name}\nPrénom : ${firstname}\nVille : ${city});
+      alert(`Nom : ${name}\nPrénom : ${firstname}\nVille : ${city}`);
     }
   </script>
-</body>
-</html>
-
-
-  <script>
-  alert(`Nom : ${lastName} \nPrénom : ${firstName}\nVille : ${city}`);
-</script>
-
 </body>
 </html>

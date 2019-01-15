@@ -9,15 +9,24 @@
 <body>
   <form>
     <label for="lastname">Votre nom  : </label>
-    <input type="text" name="lastname" id="lastname" onblur="afficherMessage()"/>
+    <input type="text" name="lastname" id="lastname"/>
   </form>
 
   <script>
-  function afficherMessage()
+
+  var name = document.querySelector('#lastname').value
+   name.onblur = afficherMessage(name);
+alert(name)
+  function afficherMessage(name)
   {
-
-    alert('Merci de votre participation');
-
+    if (name.length > 1)
+    {
+      alert('Merci de votre participation.');
+    }
+    else
+    {
+      alert('Veuillez saisir votre nom.');
+    }
   }
   </script>
 

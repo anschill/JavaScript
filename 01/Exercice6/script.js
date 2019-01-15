@@ -1,3 +1,7 @@
+var button = document.querySelector('input[type="submit"]');
+//on utilise la fonction sans les parenthèses car c'est l'événement qui déclenche l'éxecution de la fonction
+button.onclick= myFunction;
+
 function myFunction()
 {
   var dividende = document.getElementById('firstNumber').value;
@@ -5,5 +9,5 @@ function myFunction()
 
   // var quotient = (divieur % dividende);
 
-  alert(`Resultat = ${dividende % diviseur}`);
+  alert(`Resultat = ${parseFloat(dividende) % parseFloat(diviseur)}`);
 }

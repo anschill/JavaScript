@@ -10,23 +10,42 @@
 </head>
 <body>
   <div class="container ">
-    <img src="images/image1.jpg" id="image1" onmouseover="f_change(this)" onmouseout="f_reset(this)" />
-    <img src="images/image2.jpg" id="image2" onmouseover="f_change(this)" onmouseout="f_reset(this)"/>
-    <img src="images/image3.jpg" id="image3" onmouseover="f_change(this)" onmouseout="f_reset(this)"/>
-    <img src="images/image4.jpg" id="image4" onmouseover="f_change(this)" onmouseout="f_reset(this)"/>
-    <img src="images/image5.jpg" id="image5" onmouseover="f_change(this)" onmouseout="f_reset(this)"/>
+    <img src="images/image1.jpg" id="image1"  />
+    <img src="images/image2.jpg" id="image2" />
+    <img src="images/image3.jpg" id="image3" />
+    <img src="images/image4.jpg" id="image4" />
+    <img src="images/image5.jpg" id="image5" />
   </div>
 
   <script>
-  function f_change(image)
+  var image1 = document.getElementById('image1');
+  var image2 = document.getElementById('image2');
+  var image3 = document.getElementById('image3');
+  var image4 = document.getElementById('image4');
+  var image5 = document.getElementById('image5');
+
+image1.addEventListener('mouseover' , f_change);
+image1.addEventListener('mouseout' , f_reset);
+image2.addEventListener('mouseover' , f_change);
+image2.addEventListener('mouseout' , f_reset);
+image3.addEventListener('mouseover' , f_change);
+image3.addEventListener('mouseout' , f_reset);
+image4.addEventListener('mouseover' , f_change);
+image4.addEventListener('mouseout' , f_reset);
+image5.addEventListener('mouseover' , f_change);
+image5.addEventListener('mouseout' , f_reset);
+
+
+  function f_change()
   {
-    image.src = "images/"+image.id+"_2.jpg";
+    this.src = "images/"+this.id+"_2.jpg";
   }
 
-  function f_reset(image)
+  function f_reset()
   {
-    image.src =  "images/"+image.id+".jpg"
+    this.src =  "images/"+this.id+".jpg"
   }
+
 
   </script>
 </body>

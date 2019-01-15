@@ -1,7 +1,6 @@
-function myFunction()
+function calcul()
 {
-  var age = document.getElementById('age').value;
-
+  var age = document.querySelector('#age').value;
   if (age < 18 && age > 0)
   {
     alert(`Vous êtes mineur.`);
@@ -14,3 +13,5 @@ function myFunction()
     alert(`Erreur`);
   }
 }
+
+document.querySelector('#submit').onclick = calcul;

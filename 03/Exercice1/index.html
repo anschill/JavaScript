@@ -5,9 +5,13 @@
   <title>Exercice 1</title>
 </head>
 <body>
-  <img src="images/image1.jpg" id="image1" onmouseover="f_border()" onmouseout="f_noborder()"/>
+  <img src="images/image1.jpg" id="image1"/>
 </body>
 <script>
+
+var img = document.querySelector('#image1');
+img.addEventListener('mouseover', f_border);
+img.addEventListener('mouseout', f_noborder);
 
 function f_border()
 {

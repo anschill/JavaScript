@@ -28,7 +28,8 @@
       // Utilisation du DOM, par ID, on récupère la valeur
       var first = document.getElementById('firstNumber').value;
       var second = document.getElementById('secondNumber').value;
-      var result = Math.trunc(first)*second;
+      // var result = Math.trunc(first)*second;
+      var result = parseInt(first) * parseFloat(second);
       // Création d'une alert
       alert(`Resultat : ${result}`);
       }
